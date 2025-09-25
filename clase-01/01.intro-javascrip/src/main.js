@@ -40,3 +40,28 @@ let objeto = {
         console.log('Hola soy', this.nombre)
     } 
 }
+console.warn('// ! Arrays (Arreglos o Vectores)');
+// Estructura de datos indexada. Tienen un identificador único por el elementos. Empieza por 0. Tienen una dimensión (Cantidad de elementos dentro)
+
+let arrayFrutas = ['Manzana', 'Pera', 'Kiwi', 'Banana', 'Naranja', 'Frutilla' , 'Melon', 'Cerezas', 'Frutas de Dragón', 'Uva', 'Zandía', 'Durazno', 'Mango']
+
+let arrayFrutasFaltantes = ['Mora', 'Melocotón', 'Limón', 'Mandarina', 'Arandano', 'Kinoto', 'Anana']
+
+console.log(arrayFrutas);
+console.log(arrayFrutas[0]); // Accedo al primer elemento (Manzana)
+console.log(arrayFrutas[arrayFrutas.length-1]) // Accedo al último elemento
+console.log(arrayFrutas.at(-1)) // Accedo al último elemento
+console.log(arrayFrutas.length);
+console.log(arrayFrutasFaltantes)
+console.log(arrayFrutasFaltantes[0]) // Accedo al primer elemento (Mora)
+console.log(arrayFrutasFaltantes[arrayFrutas.length-1]) // Accedo al primer elemento (Mora)
+console.log(arrayFrutasFaltantes.at(-1)) // Accedo al último elemento
+
+console.log('// ! Métodos de los arrays');
+
+
+
+
+
+console.warn("// ! CONST (ES6)");
+/* Me permite construir cajitas que NO PUEDO modificar más adelante */
