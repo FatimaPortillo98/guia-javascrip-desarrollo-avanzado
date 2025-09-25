@@ -27,3 +27,16 @@ console.log(numeroConDecimal);
 console.warn("// ! CONST (ES6)");
 /* Me permite construir cajitas que NO PUEDO modificar más adelante */
 
+// ! Objeto literal
+
+let objeto = {
+    /* clave: valor */
+    /* key: value */
+    nombre: 'Maxi',
+    apellido: 'Principe',
+    edad: 22,
+    isTeacher: true,
+    saludar: function() { // No se recomienda trabajar con arrow function dentro de los objetos
+        console.log('Hola soy', this.nombre)
+    } 
+}
