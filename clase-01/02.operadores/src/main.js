@@ -23,9 +23,23 @@ console.log('// concat(): Une varios array')
 let nuevoArrayFrutasTodas = arrayFrutas.concat(arrayFrutasFaltantes)
 console.log(nuevoArrayFrutasTodas);
 
-// join(): Combina los elementos de un array en una sola cadena
-// pop(): Elimina el último elemento
-// push(): Agrega al final un elemento
+console.log('// join(): Combina los elementos de un array en una sola cadena')
+
+let cadenaFrutas = nuevoArrayFrutasTodas.join()
+console.log(cadenaFrutas);
+cadenaFrutas = nuevoArrayFrutasTodas.join('%')
+console.log(cadenaFrutas);
+
+console.log('// pop(): Elimina el último elemento');
+
+let ultimoElemento = nuevoArrayFrutasTodas.pop()
+console.log(ultimoElemento);
+
+console.log('// push(): Agrega al final un elemento');
+
+let nuevaCantidadDeElementosDelArray = nuevoArrayFrutasTodas.push('Franbuesa', 'Granada', 'Ciruela', 'Guarana', 'Ñangapiri', 'Palta', 'Tomate')
+console.log(nuevaCantidadDeElementosDelArray); // 26
+
 // reverse(): Invierte el orden de los elementos
 // shift(): Elimina el primer elemento
 // unshift(): Agrega un el elemento al principio
@@ -36,8 +50,7 @@ console.log(nuevoArrayFrutasTodas);
 // map(): El map recorre los elementos del array y modifica su valores creando resultado otro array de la misma dimensión
 // filter(): Filtra los elementos de un array y crea como resultado otro array con los elementos filtrados.
 
-
+const ArrayAnimales = ['Gatos', 'Perros', 'Cabras', 'Horneros', 'Ornitorrincos', 'Mapaches', 'Gallinas']
 
 console.warn("// ! CONST (ES6)");
 /* Me permite construir cajitas que NO PUEDO modificar más adelante */
-
