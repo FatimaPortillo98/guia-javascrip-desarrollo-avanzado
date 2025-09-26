@@ -37,20 +37,130 @@ console.log(ultimoElemento);
 
 console.log('// push(): Agrega al final un elemento');
 
-let nuevaCantidadDeElementosDelArray = nuevoArrayFrutasTodas.push('Franbuesa', 'Granada', 'Ciruela', 'Guarana', 'Ñangapiri', 'Palta', 'Tomate')
+let nuevaCantidadDeElementosDelArray = nuevoArrayFrutasTodas.push('Frambuesa', 'Granada', 'Ciruela', 'Guarana', 'Ñangapiri', 'Palta', 'Tomate')
 console.log(nuevaCantidadDeElementosDelArray); // 26
 
-// reverse(): Invierte el orden de los elementos
-// shift(): Elimina el primer elemento
-// unshift(): Agrega un el elemento al principio
+console.log('// reverse(): Invierte el orden de los elementos')
+
+let arrayInvertido = nuevoArrayFrutasTodas.reverse()
+console.log(arrayInvertido);
+
+console.log('// shift(): Eliminaga un el elemento al principio')
+
+let elementoDelPrincipioEliminado = arrayInvertido.shift()
+console.log(elementoDelPrincipioEliminado);
+
+console.log('// unshift(): Agrega un el elemento al principio')
+
+nuevaCantidadDeElementosDelArray = arrayInvertido.unshift('Carambola', 'Coco', 'Higo', 'Litchi', 'Papaya', 'Maracuya')
+console.log(nuevaCantidadDeElementosDelArray); // 31
+
+console.log('// forEach(): Itera sobre los elementos (recorre elementos)')
+// Recorre los elementos de la array
+
+// callback (cb): Es una función pasada como argumento de otra función
+//                            ⬇️⬇️ <---- callback
+//arrayInvertido.forEach(function() {})
+
+/*
+! Al no tener nombre se llama función anonima
+function(fruta) {
+    console.log(fruta)
+}
+*/
+
+console.log(arrayInvertido);
+
+arrayInvertido.forEach(function(fruta, indice, array) {
+    console.log(fruta)
+    console.log(indice)
+    console.log(array);
+})
+console.warn('-----------------------------------------');
+
+function callbackFuncion(item, indice, array) {
+    console.log(item)
+    console.log(indice)
+    console.log(array);
+}
+
+arrayInvertido.forEach(callbackFuncion)
+
+console.warn('-----------------------------------------');
+
+let personas = ['Laura', 'Lorena', 'Claudia', 'Nadia', 'Silvia']
+
+personas.forEach(callbackFuncion)
+
+/* function forEach(callback) {
+    // -----
+    // -----
+    // -----
+
+    callback()
+} */
+
+//             ⬇️ ⬇️  <---- Parametros
+/* function sumar(n1, n2) {
+    return n1 + n2
+}
+ */
+//   ⬇️ ⬇️  <---- Argumentos
+/* sumar(2, 4) // Invoco, llamo, ejecuto. */
+
+console.warn('-------------------------------------------------')
+console.warn('-------------------------------------------------')
+console.warn('-------------------------------------------------')
+
+console.warn('Repaso método forEach()')
+
+const arrayAnimales = ['Gatos', 'Perros', 'Cabras', 'Horneros', 'Ornitorrincos', 'Mapaches', 'Gallinas']
+console.log(arrayAnimales)
+
+arrayAnimales.forEach((animal) => {
+    console.log(animal)
+})
+// setencia1; setencia2; sentencia3
+// let i = 0; i < arrayAnimales.length; i++
+// 1. let i = 0 (Una sola vez)
+// 2. i < arrayAnimales.length (Se controla)
+// 3. Ingresa al bloque de código
+// 4. Se incrementa
+// 5. Se vuelve a controlar
+// 6. Ingresa al bloque de código
+
+for (let i = 0; i < arrayAnimales.length; i++) {
+    //debugger
+    console.log(arrayAnimales[i])
+}
+
 // slice(): Extrae una copia de una parte de un array en nuevo array
 // splice(): Agrega o elimina elementos en una posición especifica
 // sort(). Orden alos elementos alfabeticamente
-// forEach(): Itera sobre los elementos (recorre elementos)
 // map(): El map recorre los elementos del array y modifica su valores creando resultado otro array de la misma dimensión
 // filter(): Filtra los elementos de un array y crea como resultado otro array con los elementos filtrados.
 
-const ArrayAnimales = ['Gatos', 'Perros', 'Cabras', 'Horneros', 'Ornitorrincos', 'Mapaches', 'Gallinas']
+console.warn("Gestión de un array como cola o pila");
+
+// cola -> shift() y unshift()
+// pila -> pop() y push()
+
+console.warn('// Array (listas) homogeneas')
+
+let colores = ['rojo', 'verde', 'azul', 'negro', 'lila'] // todas cadenas
+let edades = [22, 33, 25, 55, 90] // todas numeros
+
+console.warn('// Array (listas) heterogeneos [NO DEBO]');
+//                0 -> nombre | 1 -> apellido | 2 -> edad | 3 -> isTeacher
+// let arrayMaxi = ['Maximiliano', 'Principe', 22, true]
+
+//let maxiNombre = 'Maximiliano'
+//let maxiApellido = 'Principe'
+//let maxiEdad = 22
+//let maxiIsteacher = true
+//let maxi = 'Maximiliano|Principe|22|true'
+
 
 console.warn("// ! CONST (ES6)");
 /* Me permite construir cajitas que NO PUEDO modificar más adelante */
+
